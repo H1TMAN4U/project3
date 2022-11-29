@@ -22,55 +22,7 @@
     background-position: absolute;
     background-image: linear-gradient(rgb(4 9 30 / 21%), rgb(4 9 30 / 60%)), url(https://mykaleidoscope.ru/en/uploads/posts/2022-09/1663731150_1-mykaleidoscope-ru-p-food-on-a-black-background-yeda-oboi-1.jpg);
 }
-.container1{
-  width: 60px;
-  height: 60px;
-  border-radius: 50px;
-  background: white;
-  position: relative;
-  transition: 0.5s;
-}
-.container1 .icon{
-  position: absolute;
-  left: 30px;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-.container1 .icon .search{
-  font-size: 21px;
-  cursor: pointer;
-  color: #444;
-}
-.container1.active{
-  width: 360px;
-}
-.container1 .input{
-  position: relative;
-  width: 300px;
-  height: 60px;
-  left: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.container1 .input input{
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  border: black;
-  font-size: 18px;
-  outline: none;
-}
-.container1 .input clear{
-  position: absolute;
-  right: -25px;
-  top:50%;
-  transform: translate(-50%,-50%);
-  cursor: pointer;
-  font-size: 20px;
-  color: #8888;
-}
+
 </style>
 <body>
 @extends('layouts/navigation1')
@@ -151,25 +103,6 @@
 </section>
 
 <footer class="p-4 shadow md:px-6 md:py-8 dark:bg-gray-900">
-  <div class="sm:flex sm:items-center sm:justify-between">
-    <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0"><img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-8" alt="Flowbite Logo" />
-    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span></a>
-    <ul class="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400">
-      <li>
-        <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
-      </li>
-      <li>
-        <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
-      </li>
-      <li>
-        <a href="#" class="mr-4 hover:underline md:mr-6 ">Licensing</a>
-      </li>
-      <li>
-        <a href="#" class="hover:underline">Contact</a>
-      </li>
-    </ul>
-  </div>
-  <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
   <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
   </span>
 </footer>
