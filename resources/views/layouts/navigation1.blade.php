@@ -1,5 +1,4 @@
-
-<header>
+<body>
     <nav class="px-2 bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
         <div class="container flex flex-wrap items-center justify-between mx-auto">
           <a href="#" class="flex items-center">
@@ -24,7 +23,7 @@
                         </div>
                     </div>
                 </li>
-                {{-- <li>
+                <li>
                     @if (Route::has('login'))
                     @auth
                     <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 ">Dashboard</a>
@@ -39,10 +38,9 @@
                     </li>
                     @endauth
                     @endif
-                </li> --}}
+                </li>
             </ul>
           </div>
         </div>
       </nav>
-</header>
 @yield('content')

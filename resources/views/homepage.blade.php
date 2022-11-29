@@ -1,20 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Document</title>
-<!-- CSS only -->
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
-<link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
-<link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.4/dist/flowbite.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+@extends('layouts/header')
 <style>
 .intro{
     background-repeat: no-repeat;
@@ -24,7 +8,6 @@
 }
 
 </style>
-<body>
 @extends('layouts/navigation1')
 @section('content')
 <section class="intro" style="height: 95vh;">
@@ -106,14 +89,10 @@
   <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
   </span>
 </footer>
-<script>
-
-</script>
-
 
 
 </body>
 </html>
-@endsection
+ @endsection
 
 

@@ -86,3 +86,4 @@
       </span>
     </footer>
 </x-app-layout>
+</body>
