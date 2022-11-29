@@ -18,11 +18,12 @@ return new class extends Migration
         Schema::create('recipes', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('img');
             $table->integer('servings');
-            $table->unsignedBigInteger("user_id");
-            $table->unsignedBigInteger("category_id");
-             // add foreign keys next time
+            $table->string('img');
+           $table->unsignedBigInteger('users_id');
+           $table->unsignedBigInteger("category_id");
+            $table->foreign('users_id')->references('id')->on('users')->cascadeOnDelete();
+            $table->foreign('category_id')->references('id')->on('category')->cascadeOnDelete();
             $table->timestamps();
         });
     }
@@ -34,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('recipes');
     }
 };

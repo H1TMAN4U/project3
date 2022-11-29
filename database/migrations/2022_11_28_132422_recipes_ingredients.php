@@ -13,14 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('recipes_measurements', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('airline');
+        Schema::create('recipes_ingredients', function (Blueprint $table) {
+            $table->unsignedBigInteger("recipes_id");
+            $table->unsignedBigInteger("ingredients_id");
+            $table->foreign('recipes_id')->references('id')->on('recipes')->cascadeOnDelete();
+            $table->foreign('ingredients_id')->references('id')->on('ingredients')->cascadeOnDelete();
             $table->timestamps();
         });
     }
-
+ // Es gaidu 15% no tavas atzimes sev.
     /**
      * Reverse the migrations.
      *
@@ -28,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('recipes_ingredients');
     }
 };

@@ -13,7 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('recipe_measurements', function (Blueprint $table) {
+            $table->unsignedBigInteger("recipes_id");
+            $table->unsignedBigInteger("measurements_id");
+            $table->foreign('recipes_id')->references('id')->on('recipes')->cascadeOnDelete();
+            $table->foreign('measurements_id')->references('id')->on('measurements')->cascadeOnDelete();
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('recipe_measurements');
     }
 };

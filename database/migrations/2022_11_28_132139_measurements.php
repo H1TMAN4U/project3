@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('recipes_measurements', function (Blueprint $table) {
+        Schema::create('measurements', function (Blueprint $table) {
             $table->id();
             $table->string('metric');
             $table->string('imperial');
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('measurements');
     }
 };
