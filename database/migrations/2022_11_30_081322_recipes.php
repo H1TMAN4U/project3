@@ -1,9 +1,7 @@
 <?php
 
-use Brick\Math\BigInteger;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Database\Schema\ForeignKeyDefinition;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
@@ -17,13 +15,12 @@ return new class extends Migration
     {
         Schema::create('recipes', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->integer('servings');
-            $table->string('img');
-           $table->unsignedBigInteger('users_id');
-           $table->unsignedBigInteger("category_id");
-            $table->foreign('users_id')->references('id')->on('users')->cascadeOnDelete();
-            $table->foreign('category_id')->references('id')->on('category')->cascadeOnDelete();
+            $table->string("name");
+            $table->string("description");
+            $table->string("instructions");
+            $table->string("img");
+            $table->unsignedBigInteger('category_id');
+            $table->foreign('category_id')->references('id')->on('category');
             // $table->timestamps();
         });
     }
