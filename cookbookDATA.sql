@@ -68,3 +68,12 @@ VALUES
  ("62","Shallots"),("62","Spinach"),("62","Squash"),("62","Acorn Squash"),("62","Butternut Squash"),("62","Patti Pan Squash"),("62","Spaghetti Squash"),("62","Swede"),("62","Sweet Potato"),("62","Tomatillo"),
  ("62","Tomatoes"),("62","Turnips"),("62","Water Chestnuts"),("62","yam"),("62","Gourds");
 
+
+INSERT INTO `cookbook`.`ingredients`
+(`ingredient_group_id`,`name`)
+VALUES
+("1","Whole Chicken"), ("1","Chicken breast"). ("1","Breast Fillet"), ("1","Chicken Leg"), ("1","Chicken Thigh Fillet"), ("1","Chicken Drumstick"). ("1","Chicken Wings"), ("1","Chicken Neck and Back"),
+("2","Hocks"),("2","Leg or Ham"),("2","Pork Belly"),("2","Spareribs"),("2","Pork Shoulder"),("2","Picnic Ham"),("2","Chop"),("2","Loin"),("2","Sirloin"),("2","Baby Back Ribs"),
+("3","Chuck"),("3","Brisket"),("3","Rib"),("3","Plate (belly)"),("3","Loin"),("3","Flank (abdomen)"),("3","Round (back end)").("3","Shank (thigh)")
+("4","Chuck"),("3","Brisket"),("3","Rib"),("3","Plate (belly)"),("3","Loin"),("3","Flank (abdomen)"),("3","Round (back end)"),("3","Shank (thigh)")
+
