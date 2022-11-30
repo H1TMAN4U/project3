@@ -18,7 +18,7 @@ return new class extends Migration
             $table->unsignedBigInteger("ingredients_id");
             $table->foreign('recipes_id')->references('id')->on('recipes')->cascadeOnDelete();
             $table->foreign('ingredients_id')->references('id')->on('ingredients')->cascadeOnDelete();
-            $table->timestamps();
+            // $table->timestamps();
         });
     }
  // Es gaidu 15% no tavas atzimes sev.

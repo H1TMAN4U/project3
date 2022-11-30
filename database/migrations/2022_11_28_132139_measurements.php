@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('metric');
             $table->string('imperial');
-            $table->timestamps();
+            // $table->timestamps();
         });
     }
 
