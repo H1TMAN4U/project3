@@ -26,3 +26,8 @@ require __DIR__.'/auth.php';
 Route::get('/homepage', function () {
     return view('homepage');
 });
+
+
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/home',[DataController::class,"index"]);
+});

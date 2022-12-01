@@ -62,5 +62,25 @@ VALUES
 -- Seafood
 ("14","Whole"),("14","Loin"),("14","Fillet"),("14","Butterfly Fillet"),("14","Steaks"),("14","Tail")
 ("15","Whole"),("15","Loin"),("15","Fillet"),("15","Butterfly Fillet"),("15","Steaks"),("15","Tail")
--- Shimp lobster crab  oister prawns Sakura ebi Neritidae Scallop mussels
+("16","pink shrimp"),("16","white shrimp"),("16","brown shrimp"),("16","red shrimp"),
+("16","Blue crabs"),("16","Dungeness crabs"),("16","Horseshoe crabs"),("16","King crabs"),("16","Peekytoe crabs"),("16","Rock Crab"),
+("16","lobster"),
+("16","squid"),
+("16","oysters"),("16","scallops"),
+("16","snails"),
+("16"," King prawns")
+("16"," Tiger prawns"),
+("16","Banana prawns"),
+("16","School prawns"),
+
+
+
+
+
+
+
+
+
+-- Shimp lobster crab  oister prawns  Neritidae Scallop mussels
 -- in sea food  roe  is a thing as well
+
