@@ -1,33 +1,33 @@
 use cookbook;
-INSERT INTO category (name) VALUE('food');
-INSERT INTO `group` VALUE('chicken', 'duck', 'pig', 'cow');
-INSERT INTO `group` VALUE('chicken', 'duck', 'pig', 'cow');
-INSERT INTO `group` VALUE('chicken', 'duck', 'pig', 'cow');
-INSERT INTO Recipe (name, description, instructions, img, category_id) VALUES('Boiled Egg', 'A single boiled egg', 'Add egg to cold water. Bring water to boil. Cook.','https://www.seriouseats.com/thmb/T5v_t4ZE06pasVLee8VYwkoG9Ec=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/perfect-soft-boiled-eggs-hero-05_1-7680c13e853046fd90db9e277911e4e8.JPG',1);
+-- INSERT INTO category (name) VALUE('food');
+-- INSERT INTO `group` VALUE('chicken', 'duck', 'pig', 'cow');
+-- INSERT INTO `group` VALUE('chicken', 'duck', 'pig', 'cow');
+-- INSERT INTO `group` VALUE('chicken', 'duck', 'pig', 'cow');
+-- INSERT INTO Recipe (name, description, instructions, img, category_id) VALUES('Boiled Egg', 'A single boiled egg', 'Add egg to cold water. Bring water to boil. Cook.','https://www.seriouseats.com/thmb/T5v_t4ZE06pasVLee8VYwkoG9Ec=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/perfect-soft-boiled-eggs-hero-05_1-7680c13e853046fd90db9e277911e4e8.JPG',1);
 
-INSERT INTO Recipe (name, description, instructions, img, category_id) VALUES('Chocolate Cake', 'Yummy cake', 'Add eggs, flour, chocolate to pan. Bake at 350 for 1 hour','https://food-images.files.bbci.co.uk/food/recipes/easy_chocolate_cake_31070_16x9.jpg',1);
+-- INSERT INTO Recipe (name, description, instructions, img, category_id) VALUES('Chocolate Cake', 'Yummy cake', 'Add eggs, flour, chocolate to pan. Bake at 350 for 1 hour','https://food-images.files.bbci.co.uk/food/recipes/easy_chocolate_cake_31070_16x9.jpg',1);
 
-INSERT INTO measure (name) VALUES('CUP'), ('TEASPOON'), ('TABLESPOON');
+-- INSERT INTO measure (name) VALUES('CUP'), ('TEASPOON'), ('TABLESPOON');
 
-INSERT INTO Ingredient (name, `ingredient_group_id`) VALUES('egg', 'chicken'), ('salt', 'sea salt'), ('sugar', 'White sugar.'), ('chocolate', 'milk chocolate'), ('vanilla extract', 'extract'), ('flour'), ;
-
-
-INSERT INTO RecipeIngredient (recipe_id, ingredient_id, measure_id, amount) VALUES (1, 1, NULL, 1);
-
-INSERT INTO RecipeIngredient (recipe_id, ingredient_id, measure_id, amount)  VALUES (2, 1, NULL, 3);
-
-INSERT INTO RecipeIngredient (recipe_id, ingredient_id, measure_id, amount)  VALUES (2, 2, 2, 1);
-
-INSERT INTO RecipeIngredient (recipe_id, ingredient_id, measure_id, amount)  VALUES (2, 3, 1, 2);
-
-INSERT INTO RecipeIngredient (recipe_id, ingredient_id, measure_id, amount)  VALUES (2, 4, 1, 1);
+-- INSERT INTO Ingredient (name, `ingredient_group_id`) VALUES('egg', 'chicken'), ('salt', 'sea salt'), ('sugar', 'White sugar.'), ('chocolate', 'milk chocolate'), ('vanilla extract', 'extract'), ('flour'), ;
 
 
-INSERT INTO `group` VALUE('chicken'),('cow'),('pig'),('salt'),('sugar'),('flour'),('milk'),('extract'),('chocolate'),('turkey'),('duck'),('chicken');
+-- INSERT INTO RecipeIngredient (recipe_id, ingredient_id, measure_id, amount) VALUES (1, 1, NULL, 1);
+
+-- INSERT INTO RecipeIngredient (recipe_id, ingredient_id, measure_id, amount)  VALUES (2, 1, NULL, 3);
+
+-- INSERT INTO RecipeIngredient (recipe_id, ingredient_id, measure_id, amount)  VALUES (2, 2, 2, 1);
+
+-- INSERT INTO RecipeIngredient (recipe_id, ingredient_id, measure_id, amount)  VALUES (2, 3, 1, 2);
+
+-- INSERT INTO RecipeIngredient (recipe_id, ingredient_id, measure_id, amount)  VALUES (2, 4, 1, 1);
 
 
--- form name, select ingr.grup 
-INSERT INTO Ingredient (name, `ingredient_group_id`) VALUES('egg', 'chicken');
+-- INSERT INTO `group` VALUE('chicken'),('cow'),('pig'),('salt'),('sugar'),('flour'),('milk'),('extract'),('chocolate'),('turkey'),('duck'),('chicken');
+
+
+-- -- form name, select ingr.grup 
+-- INSERT INTO Ingredient (name, `ingredient_group_id`) VALUES('egg', 'chicken');
 INSERT INTO `cookbook`.`ingredient_group`
 (`main_group`,`sub_group`)
 VALUES
