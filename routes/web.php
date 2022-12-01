@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RecipeController;
+use App\Http\Controllers\IngredientController;
+// use App\Models\Ingredients;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/search','RecipeController@search');
+Route::get('list',[RecipeController::class,'show']);
+// Route::get('list',[IngredientController::class,'show']);
 
 Route::get('/', function () {
     return view('homepage');
@@ -25,4 +31,9 @@ require __DIR__.'/auth.php';
 
 Route::get('/homepage', function () {
     return view('homepage');
+});
+
+
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/home',[DataController::class,"index"]);
 });
