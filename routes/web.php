@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RecipeController;
 use App\Http\Controllers\IngredientController;
+use App\Http\Controllers\logoutController;
 // use App\Models\Ingredients;
 
 /*
@@ -16,13 +17,13 @@ use App\Http\Controllers\IngredientController;
 |
 */
 Route::get('/search','RecipeController@search');
-Route::get('list',[RecipeController::class,'show']);
+//Route::get('list',[RecipeController::class,'show']);
 // Route::get('list',[IngredientController::class,'show']);
 
 Route::get('/', function () {
     return view('homepage');
 });
-
+Route::get('/logout', [logoutController::class, 'logout'])->name('logout');
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -36,4 +37,5 @@ Route::get('/homepage', function () {
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/home',[DataController::class,"index"]);
+    Route::get('list',[RecipeController::class,'show']);
 });

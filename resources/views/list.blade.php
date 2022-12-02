@@ -1,4 +1,7 @@
-<table border="1">
+@extends('layouts/header')
+@extends('layouts/navigation1')
+@section('content')
+{{-- <table border="1">
     <tr>
         <td>ID</td>
         <td>Name</td>
@@ -14,14 +17,29 @@
 
     </tr>
     @endforeach
-</table>
-<form action="{{ url'/search'}}">
-    <div>
-        <input id="query" type="search" placeholder="text">
-        <button type="submit">Search</button>
+</table> --}}
+@foreach ($recipes as $recipe)
+<div class="flex justify-center">
+    <div class="rounded-lg shadow-lg bg-white max-w-sm">
+        <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+            <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/182.jpg" alt=""/>
+        </a>
+        <div class="p-6">
+            <h5 class="text-black-900 text-xl font-medium mb-2">{{$recipe['name']}}</h5>
+            <div class="text-gray-700 text-base mb-4">
+                <div>
+                    <h1 for="description"><b>Description:</b></h1>
+                </div>
+                <p>{{$recipe['description']}}</p>
+                <p>{{$recipe['instructions']}}</p>
+            </div>
+
+        </div>
     </div>
-</form>
-{{-- <table border="1">
+</div>
+@endforeach
+{{-- 
+<table border="1">
     <tr>
         <td>ID</td>
         <td>Name</td>
@@ -33,3 +51,4 @@
     </tr>
     @endforeach
 </table> --}}
+@endsection

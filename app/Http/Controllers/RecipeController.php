@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Ingredients;
 use App\Models\Recipes;
 use Illuminate\Http\Request;
 
@@ -45,10 +46,17 @@ class RecipeController extends Controller
      * @param  \App\Models\Recipes  $recipes
      * @return \Illuminate\Http\Response
      */
-    public function show(Recipes $recipes)
+    public function show()
     {
-        $data= Recipes::all();
-        return view('list', ['recipes'=>$data]);
+        // pass id to use where func to get correct recipe and its ingredients
+        // $find= Recipes::all('id');
+        $recipes= Recipes::all();
+        $ing=Ingredients::all();
+        return view('list', 
+        [
+            'recipes'=>$recipes,"ingredients"=>$ing
+        ]
+         );
     }
 
     /**

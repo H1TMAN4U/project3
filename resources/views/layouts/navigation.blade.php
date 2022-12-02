@@ -1,5 +1,6 @@
-@extends('layouts/header')
-<nav x-data="{ open: false }" class="bg-gray-900 dark:border-gray-700">
+@include('layouts/header')
+
+<nav x-data="{ open: false }" class="px-2 bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
 
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -81,10 +82,10 @@
 
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200">
-            <div class="transition duration-500 block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-                <div class="font-medium text-base text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white ">{{ Auth::user()->name }}</div>
-                <div class="font-medium text-base text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white ">{{ Auth::user()->email }}</div>
-                <div class="font-medium text-base text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white "></div>
+            <div class="transition duration-500 block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                <div class="font-medium text-base text-white md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white ">{{ Auth::user()->name }}</div>
+                <div class="font-medium text-base text-white md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white ">{{ Auth::user()->email }}</div>
+                <div class="font-medium text-base text-white md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white "></div>
             </div>
 
             <div class="hidden w-full md:block md:w-auto">
